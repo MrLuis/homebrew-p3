@@ -1,18 +1,18 @@
 class P3 < Formula
   desc "Pascal compiler built on LLVM"
   homepage "https://github.com/MrLuis/p3"
-  url "https://github.com/MrLuis/p3/archive/refs/tags/v0.1.1-rc.1.tar.gz"
-  sha256 "658c4d248a14f758f53d4595598eb56cbfdac82f171e6120051308be04011cb8"
+  url "https://github.com/MrLuis/p3/archive/refs/tags/v0.1.1-rc.2.tar.gz"
+  sha256 "a20ee187a23c8fed1797ea2d41f8cd1600b7d6bd0f471e116261e42ea5fcfcc6"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/MrLuis/p3.git", branch: "main"
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "python@3.14" => :build
-  depends_on "llvm@23"
+  depends_on "llvm"
 
   def install
-    llvm = Formula["llvm@23"]
+    llvm = Formula["llvm"]
     args = %W[
       -DLLVM_DIR=#{llvm.opt_lib}/cmake/llvm
       -DPython3_EXECUTABLE=#{which("python3.14")}
@@ -26,7 +26,7 @@ class P3 < Formula
   end
 
   test do
-    assert_path_exists lib/"libpascalrt.ll"
+    assert_path_exists lib/"pascal/libpascalrt.ll"
 
     (testpath/"hello.pas").write <<~PASCAL
       program hello;
