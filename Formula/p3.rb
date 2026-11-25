@@ -6,6 +6,13 @@ class P3 < Formula
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/MrLuis/p3.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/MrLuis/homebrew-p3/releases/download/p3-0.1.1-rc.2"
+    sha256               arm64_tahoe:   "b7959881780f661d4f8cf035f57bd05073b18a23a75cad1ea487dd415b9bb5b4"
+    sha256               arm64_sequoia: "e1d1e01455122063263d5dec1f153328d37264d7ab06c7fe756fceea7477f82d"
+    sha256 cellar: :any, x86_64_linux:  "5aefbacc6241b7754f1eaa18205a24bb582dc083cdc3cb7ccb705680416280b1"
+  end
+
   depends_on "cmake" => :build
   depends_on "ninja" => :build
   depends_on "python@3.14" => :build
