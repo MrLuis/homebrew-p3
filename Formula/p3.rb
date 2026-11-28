@@ -12,10 +12,10 @@ class P3 < Formula
   end
 
   bottle do
-    root_url "https://github.com/MrLuis/homebrew-p3/releases/download/p3-0.1.1-rc.2"
-    sha256               arm64_tahoe:   "b7959881780f661d4f8cf035f57bd05073b18a23a75cad1ea487dd415b9bb5b4"
-    sha256               arm64_sequoia: "e1d1e01455122063263d5dec1f153328d37264d7ab06c7fe756fceea7477f82d"
-    sha256 cellar: :any, x86_64_linux:  "5aefbacc6241b7754f1eaa18205a24bb582dc083cdc3cb7ccb705680416280b1"
+    root_url "https://github.com/MrLuis/homebrew-p3/releases/download/p3-0.1.1-rc.5"
+    sha256               arm64_tahoe:   "17208c2ebc2bfb0dd17e7aa5de73d20152faec51b5e5134207aaac2a7c076db0"
+    sha256               arm64_sequoia: "4d531e97bed60dda9ccb47a8f76574fe178719bd00f80a6b6bc3122b640642c5"
+    sha256 cellar: :any, x86_64_linux:  "ba7974400fab4cdcbfacc3cd52ccf0bc5e5c08d3017da1fa5aff6e79b6adb169"
   end
 
   depends_on "cmake" => :build
