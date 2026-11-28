@@ -1,8 +1,8 @@
 class P3 < Formula
   desc "Pascal compiler built on LLVM"
   homepage "https://github.com/MrLuis/p3"
-  url "https://github.com/MrLuis/p3/archive/refs/tags/v0.1.1-rc.2.tar.gz"
-  sha256 "a20ee187a23c8fed1797ea2d41f8cd1600b7d6bd0f471e116261e42ea5fcfcc6"
+  url "https://github.com/MrLuis/p3/archive/refs/tags/v0.1.1-rc.5.tar.gz"
+  sha256 "6b8b48c3ae49fe2c811ae7be2b3a051b0ba1948fb0ecb8f9a133b6b40390cfef"
   license "Apache-2.0" => { with: "LLVM-exception" }
   head "https://github.com/MrLuis/p3.git", branch: "main"
 
